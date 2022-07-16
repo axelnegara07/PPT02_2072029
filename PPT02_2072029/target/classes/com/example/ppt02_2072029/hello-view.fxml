@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ppt02_2072029.HelloController">
+    <left>
+        <VBox prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Student Baru" textAlignment="CENTER" wrappingWidth="200.0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="25.0" />
+                    </VBox.margin>
+                </Text>
+                <Label text="NRP:">
+                    <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="txtNrp" styleClass="highlight">
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </TextField>
+                <Label text="Nama:">
+                    <VBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="txtNama" styleClass="highlight">
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </TextField>
+            <Label text="Nilai IPA:">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtIpa" styleClass="highlight">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Nilai IPS:">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtIps" styleClass="highlight">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="31.0" prefWidth="211.0">
+               <children>
+                      <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#OnAdd" prefHeight="25.0" prefWidth="155.0" styleClass="highlight" text="Tambah">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                      </Button>
+                  <Button fx:id="btnUpd" mnemonicParsing="false" onAction="#OnUpd" prefHeight="25.0" prefWidth="155.0" styleClass="highlight" text="Update">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                      <Button fx:id="btnDel" mnemonicParsing="false" onAction="#OnDel" prefWidth="155.0" styleClass="highlight" text="Hapus">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                      </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="table1" onMouseClicked="#OnClick" prefHeight="400.0" prefWidth="440.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colNrp" prefWidth="75.0" text="NRP" />
+                <TableColumn fx:id="colNama" prefWidth="75.0" text="NAMA" />
+            <TableColumn fx:id="colIpa" prefWidth="75.0" text="IPA" />
+            <TableColumn fx:id="colIps" prefWidth="75.0" text="IPS" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
